@@ -22,12 +22,6 @@ function addToPath($dir) {
 
     $env:PATH = "${env:PATH};$dir"
 }
-
-if( ! ( Get-Command "choco" -ErrorAction SilentlyContinue ) ) {
-    $web = (New-Object System.Net.WebClient)
-    iex $web.DownloadString('https://chocolatey.org/install.ps1')
-}
-
 if( ! ( Get-Command "makensis" -ErrorAction SilentlyContinue ) ) {
     choco install -y nsis
     addToPath 'C:\Program Files (x86)\NSIS'
