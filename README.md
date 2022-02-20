@@ -1,4 +1,4 @@
-# Tunic
+# Tunic (AmpheOS fork)
 
 Install Linux over or alongside an existing Windows install, straight from Windows,
 without requiring to boot from external media like a flash drive or making BIOS configuration changes.
