@@ -10,6 +10,7 @@ Icon "files\tunic-logo.ico"
 Section "Tunic Linux Installer"
     SetOutPath "$TEMP\Tunic"
     file tunic.ps1
+    file Test-PendingReboot.ps1
     file /r files
     ${If} ${RunningX64}
         ExecWait '$WINDIR\sysnative\windowspowershell\v1.0\powershell.exe -executionpolicy bypass -nologo -inputformat none -noninteractive -WindowStyle Hidden -file tunic.ps1'

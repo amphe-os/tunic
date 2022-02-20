@@ -199,9 +199,8 @@ function checks() {
     }
 
     #TODO: find lighter way to check for updates
-    install-packageprovider -name NuGet -force
-    install-script -name Test-PendingReboot -force
-    if( (Test-PendingReboot.ps1 -computername localhost).isPendingReboot ) {
+    #Changed to a local file cause i wanted to commit die when dealing with modules. 
+    if( (./Test-PendingReboot.ps1 -computername localhost).isPendingReboot ) {
         if( yes('A Windows Update reboot is pending.  You need to reboot and rerun Tunic.  Reboot now?') ) {
             restart-computer
         }
