@@ -1,5 +1,9 @@
 @(
     @{
+        name='Ubuntu 20.04.3/LTS';
+        url='http://releases.ubuntu.com/focal/ubuntu-20.04.3-desktop-amd64.iso';
+    },
+    @{
         name='Linux Mint 19.3 - Cinnamon';
         url='http://mirrors.gigenet.com/linuxmint/iso/stable/19.3/linuxmint-19.3-cinnamon-64bit.iso';
     },
