@@ -37,7 +37,7 @@ function initData() {
     $global:distros = . files/distros.ps1
 
     # Load distro information from Downloads directory
-    $mounts = ( dir "${HOME}\Downloads\*.iso" | mount-diskImage )
+    $mounts = ( dir "*.iso" | mount-diskImage )
     try {
         if( $mounts ) {
             $global:distros += ( $mounts | % { @{ name=($_ | get-volume).fileSystemLabel; url=$_.imagePath; } } )
